@@ -64,8 +64,6 @@ function lsRememberMe() {
   }
 }
 
-
-
 // funcion para validar campo select y option
 function showSelected() {
   /* Para obtener el texto */
