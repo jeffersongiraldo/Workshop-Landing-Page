@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
 @keyframes animate {
   0% {
     filter: hue-rotate(0deg);
@@ -100,25 +111,26 @@
   overflow: hidden;
 }
 .section-main .hero-event .container-register {
+  border: #0fb0f0 8px groove;
+  margin-left: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 380px;
-  margin-left: 120px;
-  background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, rgba(11, 59, 95, 0.9) 50%, #607d8b 100%);
+  width: 22%;
+  height: 480px;
+  background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
   filter: hue-rotate();
-  animation: animate 10s linear infinite;
+  animation: animate 7s linear infinite;
 }
 .section-main .hero-event .container-register .box-register {
   position: relative;
-  padding: 30px;
-  width: 100%;
+  padding: 50px;
+  width: 360px;
   height: 480px;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   align-items: center;
-  background: rgba(10, 132, 223, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 6px;
   box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
 }
@@ -131,20 +143,29 @@
   bottom: 5px;
   border-radius: 5px;
   pointer-events: none;
-  background: linear-gradient(to bottom, rgba(8, 78, 67, 0.3) 0%) rgba(10, 132, 223, 0.1) 15%, transparent 50%, transparent 85%, rgba(10, 132, 223, 0.3) 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%) rgba(255, 255, 255, 0.1) 15%, transparent 50%, transparent 85%, rgba(255, 255, 255, 0.1) 100%;
 }
 .section-main .hero-event .container-register .box-register .form-register {
   position: relative;
-  width: 90%;
+  width: 100%;
 }
-.section-main .hero-event .container-register .box-register .form-register h2 {
+.section-main .hero-event .container-register .box-register .form-register .image {
+  width: 30px;
+  height: 30px;
+}
+.section-main .hero-event .container-register .box-register .form-register .title-form {
+  text-align: center;
+  font-family: cursive;
+  font-size: 35px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
-  text-transform: capitalize;
   font-weight: 600;
-  font-size: 30px;
   letter-spacing: 2px;
   margin-bottom: 30px;
+}
+.section-main .hero-event .container-register .box-register .form-register .span {
+  font-family: cursive;
+  font-size: 18px;
+  color: #fff;
 }
 .section-main .hero-event .container-register .box-register .form-register .inputBx {
   position: relative;
@@ -166,35 +187,72 @@
 }
 .section-main .hero-event .container-register .box-register .form-register .inputBx input::placeholder {
   color: #fff;
+  font-family: cursive;
 }
 .section-main .hero-event .container-register .box-register .form-register .inputBx input[type=submit] {
   background: #fff;
   color: #111;
   max-width: 100px;
   padding: 8px 10px;
-  box-shadow: none;
   font-weight: 500;
   letter-spacing: 1px;
-  cursor: pointer;
+  font-family: cursive;
+  font-size: 17px;
 }
-.section-main .hero-event .container-register .box-register .form-register .inputBx .img-register {
-  width: 30px;
-  height: 30px;
+.section-main .hero-event .container-register .box-register .form-register .inputBx img {
   position: absolute;
-  left: 8px;
-  top: 3px;
+  left: 10px;
   transform: scale(0.7);
   filter: invert(1);
 }
 .section-main .hero-event .container-register .box-register .form-register p {
   color: #fff;
-  font-family: "Caveat", cursive;
-  font-weight: 400;
-  font-size: 20px;
+  font-weight: 300;
+  font-size: 15px;
   margin-top: 5px;
 }
 .section-main .hero-event .container-register .box-register .form-register a {
   color: #fff;
+}
+.section-main .hero-event .container-register .box-register .form-register .checkBox {
+  padding-right: 9px;
+  margin-left: 22px;
+}
+.section-main .hero-event .container-register .box-register .form-register .roles {
+  padding-top: 20px;
+  padding-left: 48px;
+}
+.section-main .hero-event .container-register .box-register .form-register .roles .admin-img {
+  margin: -20px 15px 0 -5px;
+  width: 43px;
+  height: 43px;
+}
+.section-main .hero-event .container-register .box-register .form-register .select {
+  margin: 10px 0 0 10px;
+  opacity: 1;
+  border-radius: 10%;
+  font-size: 15px;
+  width: 110px;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-weight: 500;
+  font-family: cursive;
+}
+.section-main .hero-event .container-register .box-register .form-register .rememberMe {
+  margin-left: 22px;
+}
+.section-main .hero-event .container-register .box-register .form-register .p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: cursive;
+}
+.section-main .hero-event .container-register .box-register .form-register .boton {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
