@@ -1,19 +1,27 @@
 @import "variables";
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+}
 @keyframes animate {
-	0% {
-		filter: hue-rotate(0deg);
-	}
-	100% {
-		filter: hue-rotate(360deg);
-	}
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .section-main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
-  background: radial-gradient(circle, rgba(10,132,223,1) 0%, rgba(36,80,183,0.95) 100%);
+  background: radial-gradient(circle, rgba(10, 132, 223, 1) 0%, rgba(36, 80, 183, 0.95) 100%);
   .container-info-event {
     .name-info-event {
       display: inline-block;
@@ -23,7 +31,7 @@
       font-weight: 700;
       text-align: left;
       color: #fff;
-      padding: 2px 15px ;
+      padding: 2px 15px;
       border-right: 1px solid #fff;
       span {
         display: block;
@@ -41,7 +49,7 @@
       font-size: 28px;
       font-weight: 700;
       color: #fff;
-      padding: 2px 15px ;
+      padding: 2px 15px;
       span {
         display: block;
         font-family: $main-font;
@@ -100,31 +108,34 @@
         width: 530px;
         object-fit: cover;
         overflow: hidden;
+        animation: animate 7s linear infinite;
       }
     }
     .container-register {
+      border: rgb(15, 176, 240) 8px groove;
+      margin-left: 150px;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%;
-      max-width: 380px;
-      margin-left: 120px;
-      background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, rgba(11, 59, 95, 0.9) 50%, #607d8b 100%);
+      width: 22%;
+      height: 480px;
+      background: linear-gradient(-30deg, #03a9f4 0%, #3a78b7 50%, #262626 50%, #607d8b 100%);
       filter: hue-rotate();
-      animation: animate 10s linear infinite;
+      animation: animate 7s linear infinite;
+
       .box-register {
         position: relative;
-        padding: 30px;
-        width: 100%;
+        padding: 50px;
+        width: 360px;
         height: 480px;
         display: flex;
-        justify-content: left;
+        justify-content: center;
         align-items: center;
-        background: rgba(10,132,223, 0.1); //rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 6px;
         box-shadow: 0 5px 35px rgba(0, 0, 0, 0.2);
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 5px;
           left: 5px;
@@ -132,19 +143,30 @@
           bottom: 5px;
           border-radius: 5px;
           pointer-events: none;
-          background: linear-gradient(to bottom, rgba(8, 78, 67, 0.3) 0%) rgba(10,132,223, 0.1) 15%, transparent 50%, transparent 85%, rgba(10,132,223, 0.3) 100%;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%) rgba(255, 255, 255, 0.1) 15%,
+            transparent 50%, transparent 85%, rgba(255, 255, 255, 0.1) 100%;
         }
+
         .form-register {
           position: relative;
-          width: 90%;
-          h2 {
+          width: 100%;
+          .image {
+            width: 30px;
+            height: 30px;
+          }
+          .title-form {
+            text-align: center;
+            font-family: cursive;
+            font-size: 35px;
             color: #fff;
-            font-family: $main-font;
-            text-transform: capitalize;
             font-weight: 600;
-            font-size: 30px;
             letter-spacing: 2px;
             margin-bottom: 30px;
+          }
+          .span {
+            font-family: cursive;
+            font-size: 18px;
+            color: #fff;
           }
           .inputBx {
             position: relative;
@@ -164,6 +186,7 @@
               box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.2);
               &::placeholder {
                 color: #fff;
+                font-family: cursive;
               }
             }
             input[type="submit"] {
@@ -171,33 +194,130 @@
               color: #111;
               max-width: 100px;
               padding: 8px 10px;
-              box-shadow: none;
               font-weight: 500;
               letter-spacing: 1px;
-              cursor: pointer;
+              font-family: cursive;
+              font-size: 17px;
             }
-            .img-register{
-              width: 30px;
-              height: 30px;
+            img {
               position: absolute;
-              left: 8px;
-              top: 3px;
+              left: 10px;
               transform: scale(0.7);
               filter: invert(1);
             }
           }
           p {
             color: #fff;
-            font-family: $subtitle-font;
-            font-weight: 400;
-            font-size: 20px;
+            font-weight: 300;
+            font-size: 15px;
             margin-top: 5px;
           }
           a {
             color: #fff;
           }
+          .checkBox {
+            padding-right: 9px;
+            margin-left: 22px;
+          }
+          .roles {
+            padding-top: 20px;
+            padding-left: 48px;
+            .admin-img {
+              margin: -20px 15px 0 -5px;
+              width: 43px;
+              height: 43px;
+            }
+          }
+          .select {
+            margin: 10px 0 0 10px;
+            opacity: 1;
+            border-radius: 10%;
+            font-size: 15px;
+            width: 110px;
+            background-color: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-weight: 500;
+            font-family: cursive;
+          }
+          .rememberMe {
+            margin-left: 22px;
+          }
+          .p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-family: cursive;
+          }
+          .boton {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
       }
     }
+  }
+  // USER STYLES
+  .box-img-user {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px 0 300px;
+    p {
+      font-family: cursive;
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 25px;
+      width: 40%;
+    }
+
+    .img-user {
+      width: 500px;
+      height: 350px;
+      animation: animate 7s linear infinite;
+    }
+  }
+  .user-register {
+    margin-top: 40px;
+    width: 70%;
+    height: 800px;
+    border: rgb(8, 183, 236) 5px inset;
+    border-radius: 8%;
+    background: rgb(208, 228, 236);
+    animation: animate 8s linear infinite;
+  }
+}
+.section-footer {
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: rgba(62, 137, 223, 0.7);
+  .text-footer {
+    font-family: cursive;
+    font-size: 25px;
+    color: #111;
+  }
+  .container-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    a{ 
+      color: rgb(10, 116, 197);
+    }
+    a:hover{
+      animation: animate 4s linear infinite;
+    }
+    
+  }
+  .reserved {
+    font-style:italic;
+    font-size: small;
   }
 }

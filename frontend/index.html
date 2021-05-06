@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,16 @@
   <link rel="stylesheet" href="./styles/css/reset.css">
   <link rel="stylesheet" href="./styles/css/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,500&display=swap"
+    rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="./assets/img-reboot-world.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
   <title>Campus Party Colombia</title>
 </head>
+
 <body>
   <section class="section-main">
     <div class="container-info-event">
@@ -36,29 +43,85 @@
       <figure class="box-img-section-main">
         <img src="./assets/img-reboot-world.png" class="img-section-main" alt="">
       </figure>
+      <!-- CONTENEDOR GENERAL DE LOGIN Y REGISTRO  -->
       <div class="container-register">
-        <!-- ______________Formato de registro__________________ -->
-        <div class="box-register">
+        <!-- CONTENEDOR DEL LOGIN -->
+        <div class="box-register" id="box-login" style="display: none;">
           <div class="form-register">
-            <h2>Register</h2>
+            <h2 class="title-form">Login</h2>
             <form action="">
               <div class="inputBx">
-                <input type="text" placeholder="Email">
-                <img class="img-user img-register" src="./assets/user.png" alt="">
+                <input type="email" placeholder="Email" id="email">
+                <img class="image" src="./assets/user.png" alt="">
               </div>
               <div class="inputBx">
                 <input type="password" placeholder="Password">
-                <img class="img-register" src="./assets/lock.png" alt="">
+                <img class="image" src="./assets/lock.png" alt="">
               </div>
+              <div class="inputBx roles">
+                <label> <span class="span">Tipo de usuario</span>
+                  <select id="rol" name="rol" class="select" onchange="showSelected();">
+                    <option value="User" class="option">User</option>
+                    <option value="Admin" class="option">Admin</option>
+                  </select>
+                </label>
+                <img src="./assets/admin.png" class="ïmage admin-img" alt="">
+              </div>
+              <label class="rememberMe">
+                <input class="checkBox" type="checkbox" value="lsRememberMe" id="rememberMe">
+                <span class="span">Remember Me</span>
+              </label>
               <div class="inputBx boton">
-                <input class="boton" type="submit" value="Register">
+                <input class="boton" type="submit" value="Login" id="ingresar" onclick="lsRememberMe()">
               </div>
             </form>
-            <p class="p"><a href="index.html">Back to Login</a></p>
+            <!-- <p class="p"><a href="#">Forget  Password</a></p>-->
+            <p class="p" id="p"><a href="">Need an Account</a></p>
+          </div>
+        </div>
+        <!-- CONTENEDOR DEL REGISTRO -->
+        <div class="box-register" id="box-register">
+          <div class="form-register" id="form-register">
+            <h2 class="title-form">Register</h2>
+            <form action="">
+              <div class="inputBx">
+                <input type="text" placeholder="Nombre Completo" pattern="[A-Za-z]{1,30}"
+                  title="No ingrese números ni carácteres">
+                <img class="image" src="./assets/user.png" alt="">
+              </div>
+              <div class="inputBx">
+                <input type="text" placeholder="Celular" pattern="[0-9]{1,10}"
+                  title="solo se admite un total de 10 valores númericos">
+                <img class="image" src="./assets/celular.png" alt="">
+              </div>
+              <div class="inputBx">
+                <input type="email" placeholder="Email" id=emailR>
+                <img class="image" src="./assets/user.png" alt="">
+              </div>
+              <div class="inputBx">
+                <input type="password" placeholder="Password">
+                <img class="image" src="./assets/lock.png" alt="">
+              </div>
+              <div class="inputBx boton">
+                <input class="boton" type="submit" value="Register" onclick="getData()">
+              </div>
+            </form>
+            <p class="p" onclick="changeRegister()">Back to Login</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <section class="section-footer">
+    <span class="text-footer"> Visitanos tambien en: </span>
+    <div class="container-icons">
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+    </div>
+    <span class="reserved">derechos reservados: @jeffer @ana @camilo</span>
+  </section>
+  <script src="./scripts/index.js" type="text/javascript"></script>
 </body>
+
 </html>
