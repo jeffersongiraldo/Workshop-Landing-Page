@@ -49,13 +49,13 @@
         <div class="box-register" id="box-login" style="display: none;">
           <div class="form-register">
             <h2 class="title-form">Login</h2>
-            <form action="">
+            <form action="" onsubmit="return validar()">
               <div class="inputBx">
-                <input type="email" placeholder="Email" id="email">
+                <input type="email" placeholder="Email" id="email" required>
                 <img class="image" src="./assets/user.png" alt="">
               </div>
               <div class="inputBx">
-                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Password" required>
                 <img class="image" src="./assets/lock.png" alt="">
               </div>
               <div class="inputBx roles">
@@ -83,23 +83,23 @@
         <div class="box-register" id="box-register">
           <div class="form-register" id="form-register">
             <h2 class="title-form">Register</h2>
-            <form action="">
+            <form action="./user.html">
               <div class="inputBx">
-                <input type="text" placeholder="Nombre Completo" pattern="[A-Za-z]{1,30}"
+                <input required type="text" placeholder="Nombre Completo" pattern="[A-Za-z]{1,30}"
                   title="No ingrese números ni carácteres">
                 <img class="image" src="./assets/user.png" alt="">
               </div>
               <div class="inputBx">
-                <input type="text" placeholder="Celular" pattern="[0-9]{1,10}"
+                <input required type="text" placeholder="Celular" pattern="[0-9]{1,10}"
                   title="solo se admite un total de 10 valores númericos">
                 <img class="image" src="./assets/celular.png" alt="">
               </div>
               <div class="inputBx">
-                <input type="email" placeholder="Email" id=emailR>
+                <input required type="email" placeholder="Email" id=emailR>
                 <img class="image" src="./assets/user.png" alt="">
               </div>
               <div class="inputBx">
-                <input type="password" placeholder="Password">
+                <input required type="password" placeholder="Password">
                 <img class="image" src="./assets/lock.png" alt="">
               </div>
               <div class="inputBx boton">
