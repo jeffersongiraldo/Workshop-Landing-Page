@@ -19,7 +19,7 @@ a {
 }
 .section-main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
   background: radial-gradient(circle, #0a84df 0%, rgba(36, 80, 183, 0.95) 100%);
 }
@@ -109,6 +109,7 @@ a {
   width: 530px;
   object-fit: cover;
   overflow: hidden;
+  animation: animate 7s linear infinite;
 }
 .section-main .hero-event .container-register {
   border: #0fb0f0 8px groove;
@@ -253,6 +254,65 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.section-main .box-img-user {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 300px 0 300px;
+}
+.section-main .box-img-user p {
+  font-family: cursive;
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 25px;
+  width: 40%;
+}
+.section-main .box-img-user .img-user {
+  width: 500px;
+  height: 350px;
+  animation: animate 7s linear infinite;
+}
+.section-main .user-register {
+  margin-top: 40px;
+  width: 70%;
+  height: 800px;
+  border: #08b7ec 5px inset;
+  border-radius: 8%;
+  background: #d0e4ec;
+  animation: animate 8s linear infinite;
+}
+
+.section-footer {
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: rgba(62, 137, 223, 0.7);
+}
+.section-footer .text-footer {
+  font-family: cursive;
+  font-size: 25px;
+  color: #111;
+}
+.section-footer .container-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 30px;
+}
+.section-footer .container-icons a {
+  color: #0a74c5;
+}
+.section-footer .container-icons a:hover {
+  animation: animate 4s linear infinite;
+}
+.section-footer .reserved {
+  font-style: italic;
+  font-size: small;
 }
 
 /*# sourceMappingURL=style.css.map */

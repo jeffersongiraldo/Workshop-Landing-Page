@@ -19,7 +19,7 @@ a {
 
 .section-main {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   padding: 20px;
   background: radial-gradient(circle, rgba(10, 132, 223, 1) 0%, rgba(36, 80, 183, 0.95) 100%);
   .container-info-event {
@@ -108,6 +108,7 @@ a {
         width: 530px;
         object-fit: cover;
         overflow: hidden;
+        animation: animate 7s linear infinite;
       }
     }
     .container-register {
@@ -220,7 +221,7 @@ a {
           }
           .roles {
             padding-top: 20px;
-            padding-left:48px;
+            padding-left: 48px;
             .admin-img {
               margin: -20px 15px 0 -5px;
               width: 43px;
@@ -238,7 +239,7 @@ a {
             font-weight: 500;
             font-family: cursive;
           }
-          .rememberMe{
+          .rememberMe {
             margin-left: 22px;
           }
           .p {
@@ -257,5 +258,66 @@ a {
         }
       }
     }
+  }
+  // USER STYLES
+  .box-img-user {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 300px 0 300px;
+    p {
+      font-family: cursive;
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 25px;
+      width: 40%;
+    }
+
+    .img-user {
+      width: 500px;
+      height: 350px;
+      animation: animate 7s linear infinite;
+    }
+  }
+  .user-register {
+    margin-top: 40px;
+    width: 70%;
+    height: 800px;
+    border: rgb(8, 183, 236) 5px inset;
+    border-radius: 8%;
+    background: rgb(208, 228, 236);
+    animation: animate 8s linear infinite;
+  }
+}
+.section-footer {
+  line-height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  background: rgba(62, 137, 223, 0.7);
+  .text-footer {
+    font-family: cursive;
+    font-size: 25px;
+    color: #111;
+  }
+  .container-icons {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 30px;
+    a{ 
+      color: rgb(10, 116, 197);
+    }
+    a:hover{
+      animation: animate 4s linear infinite;
+    }
+    
+  }
+  .reserved {
+    font-style:italic;
+    font-size: small;
   }
 }
