@@ -48,10 +48,10 @@ function lsRememberMe() {
     let combo = document.getElementById("rol");
     let selected = combo.options[combo.selectedIndex].text;
     if (selected == 'Admin') {
-      window.open('../admin.html', '_self')
+      window.open('./admin.html', '_self')
     }
     else {
-      window.open('../user.html', '_self')
+      window.open('./user.html', '_self')
     }
   }
 //seccion para enviar al localstorage
